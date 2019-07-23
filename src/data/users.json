@@ -1,0 +1,10 @@
+{
+    "candidates": [{
+        "name": "Arica y Parinacota",
+        "country": ["Arica", "Camarones", "Putre", "General Lagos"]
+    },
+    {
+        "region": "Tarapacá",
+        "comunas": ["Iquique", "Alto Hospicio", "Pozo Almonte", "Camiña", "Colchane", "Huara", "Pica"]
+    }]
+}
