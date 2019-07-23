@@ -6,7 +6,6 @@
 
 #unete, #unetea{
     background-color: #f1717f;
-   
     color: white;
     border: none;
 }
@@ -14,4 +13,10 @@
     background-color: transparent;
     color: white;
     font-size: 14px;
+}
+#ingresar{
+    color: #355e7e;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
 }
