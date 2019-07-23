@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import chile from '../data/chile.json';
+import Nav from './navbar';
 
 
 
@@ -14,20 +15,7 @@ regiones = () =>{
   render(){
   return (
     <React.Fragment>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link">Features</a>
-      <a class="nav-item nav-link">Pricing</a>
-      <a class="nav-item nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
-    </div>
-  </div>
-</nav>
+      <Nav></Nav>
       <div  Style="padding:9%; background-color:#355E7E">
       <div className="card" Style="padding: 20px">
     <form>

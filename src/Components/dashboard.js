@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './../css/dashboard.css';
+import Nav from './navbar'
 
 
 class Dashboard extends Component {
     render() {
   return (
       <React.Fragment>
-         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
+         <Nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
         <div class="flex-row d-flex">
             <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">Admin Template</a>
+            <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">hola</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -34,7 +35,7 @@ class Dashboard extends Component {
                 </li>
             </ul>
         </div>
-    </nav>
+    </Nav>
     <div className="container-fluid" id="main">
         <div className="row row-offcanvas row-offcanvas-left">
             <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
