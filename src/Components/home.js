@@ -26,15 +26,11 @@ function Home() {
 
         <div class="header-content__block col col-lg-3 col-md-auto">
         <ul class="header-login">
-            <li class="header-login__item"><a href="#" class="header-login__button header-login__button--bordered w-button">Ingresa</a></li>
-            <li class="header-login__item"><a href="#" class="header-login__button header-login__button--pink w-button">Únete</a></li>
+            <li class="header-login__item"><a href="#" class="header-login__button header-login__button--bordered w-button">INGRESA</a></li>
+            <li class="header-login__item"><a href="#" class="header-login__button header-login__button--pink w-button">ÚNETE</a></li>
         </ul>
         </div>
-        <nav class="navbar navbar-dark ">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-        </button>
-       </nav>
+       
         </div>
         </header>
             
@@ -45,6 +41,7 @@ function Home() {
             <h1 class="home-intro__subtitle">Trusted by more than a thousand women and companies</h1>
             <h1 class="home-intro__title home-intro__title--playfair">We connect female talent with the very best companies that have flexible offers for them.</h1>
             </div>
+
             <div class="home-intro__content row justify-content-around">
             <div class="home-intro__column col col-lg-6 col-md-4">
             <div class="home-block home-block--fill">
