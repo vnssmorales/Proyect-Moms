@@ -10,9 +10,7 @@ import Nav from './navbar';
 
 function HomeMobile() {
     return (
-
         <React.Fragment>
-                      
                   <Nav></Nav>
 
                     <div className="main-container">
