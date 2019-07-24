@@ -29,24 +29,34 @@
     font-size: 16px;
 }
 
-.card{
+#purpose, #purpose2, #purpose3{
     border-bottom: 4px solid #f1717f;
     margin-bottom: 30px;
+    width: 22rem;
 }
 
 .card .card-body{
     color: #355e7e;
+    
 }
 
 .row{
     margin-right: 0px !important;
     margin-left: 0px !important;
 }
-#registro{
+#registro, #ingresarEmp{
     background-color: #f1717f;
     color: white;
     border: none;
     padding: 15px 20px;
     border-radius: 5px;
     font-size: 18px;
+}
+
+#services, #services1, #services2{
+    width: 22rem;
+}
+
+#title-services, #title-services1, #title-services2{
+    background-color: #254863;
 }
