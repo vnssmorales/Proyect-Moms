@@ -56,7 +56,7 @@ function Home() {
             </div>
             </div>
             </div>
-            
+
             </div><a href="#home-purpose" class="home-intro__anchor inline-block">
             <div class="home-intro__anchor__text">Conoce más</div>
             <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0f4be94c92b46e721f933a_arrow-down_white.svg" alt="" class="home-intro__anchor__arrow"/></a></div>
@@ -110,6 +110,7 @@ function Home() {
             <div class="home-heading__text home-heading__text--white">Mejoramos tu representación de género y te guiamos con mejores prácticas de mercado.<br/></div>
             </div>
             </div>
+            
             <div class="home-services__container row justify-content-around">
             <div class="service-block col col-lg-4 col-md-3">
             <div class="service-block__wrapper">
