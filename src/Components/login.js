@@ -40,7 +40,7 @@ class Login extends Component {
       <React.Fragment>
   <Nav></Nav>
   <div style={{padding:" 5px", backgroundColor:"#EFEFEF",  margin: "auto",    }}>
-    <div className="card" Style="padding:15px; margin-top: 80px">
+    <div className="card" Style="padding:15px; margin-top: 80px; margin-bottom:200px; padding-bottom:20px;">
         <article className="card-body">
             <h4 className="card-title text-center mb-4 mt-1">Iniciar Sesión</h4>
             <hr></hr>
@@ -63,12 +63,12 @@ class Login extends Component {
                     </div> 
                 </div> 
                 <div className="options" Style="padding:auto;">
-                <p className="text-right"> ¿Olvidaste tu contraseña?</p>
+                <span className="text-right"> ¿Olvidaste tu contraseña?</span>
                 <Link to="/dashboard"><button type="submit"  onClick={this.login} className="btn btn-primary btn-block" id="log">INICIAR SESIÓN</button></Link>
-               
-                <Link to="/register"> <button type="button" className="btn btn-light m-2" id="unete">REGISTRATE</button></Link>
+                <span className="text-right">¿Eres usuario nuevo?</span>
+                <Link to="/register"> <button type="submit" className="btn btn-primary btn-block" id="unete">REGISTRATE</button></Link>
                 
-                <p className="text-right">¿Eres usuario nuevo?</p>
+                
                 </div>
             </form>
         </article>

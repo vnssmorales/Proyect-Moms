@@ -12,13 +12,17 @@
 }
 #log{
     background-color:#F85E76 !important;
-    width: 200px;
     border-color:#F85E76;
+    margin-bottom: 15px;
+    margin: auto;
 }
 #unete{
-    background-color:#F85E76 !important;
-    width: 200px;
-    border-color:#F85E76;
+    margin: auto;
 }
+#btn{
+    background-color:#F85E76 !important;
+    border-color: #F85E76 !important;
+}
+
 
 
