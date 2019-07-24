@@ -1,62 +1,19 @@
 import React from 'react';
 import '../homeMobile.css';
 import {Link} from 'react-router-dom';
-<<<<<<< HEAD
 import image1 from '../img/home-purpose_1.jpg';
 import image2 from '../img/home-purpose_2.jpg';
 import image3 from '../img/home-purpose_3.jpg';
 import image4 from '../img/case-study1.jpg';
 import image5 from '../img/case-study2.jpg';
-=======
 import Nav from './navbar';
->>>>>>> bf282a383000d49910f0bff73dc864bc43160c50
 
 function HomeMobile() {
     return (
 
         <React.Fragment>
                       
-<<<<<<< HEAD
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-light">
-                        <div className="logomoms col col-lg-2 col-md-2">
-                        <Link to="/home"><img src={logo} alt="logo"/></Link>
-                        </div>
-
-                        <div className="info col col-lg-7 col-md-6">
-                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                              <span className="navbar-toggler-icon"></span>
-                            </button>
-                        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <a className="nav-link">Sobre nosotros</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link">Servicios</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" >Advisors</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link">PM Academy</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link">Blog</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link">Contáctanos</a>
-                                </li>
-                            </ul>
-                            </div>
-                            </div>
-                            <div className="buttons col col-lg-3 col-md-3">
-                             <Link to="/login"> <button type="button" className="btn btn-light m-2" id="ingresa">INGRESA</button></Link> 
-                             <Link to="register"> <button type="button" className="btn btn-light m-2" id="unete">ÚNETE</button></Link>
-                            </div>
-                    </nav>
-=======
                   <Nav></Nav>
->>>>>>> bf282a383000d49910f0bff73dc864bc43160c50
 
                     <div className="main-container">
 
@@ -177,11 +134,13 @@ function HomeMobile() {
                    <div className="home-services__actions">
                    <div className="home-services__wrapper">
                    <h6 className="home-services__title">¿Listo para trabajar?</h6>
-                   <Link to="/login"> <button type="button" className="btn btn-light m-2" id="ingresarEmp">Registra tu empresa</button></Link>
+                   <Link to="/register"> <button type="button" className="btn btn-light m-2" id="ingresarEmp">Registra tu empresa</button></Link>
                    </div>
                    </div>
                    </div>
                    </div>
+
+
 
                    <div className="case-studies">
                    <div className="home-heading">
@@ -192,12 +151,13 @@ function HomeMobile() {
                    </div>
 
                    <div className="case-studies row justify-content-around">
-                   <div className="case-study col col-6">
-                   <div className="case-study__wrapper row">
-                   <div className="case-study__block col col-6">
+                   
+                   <div className="case-study col col-lg-6">
+                   <div className="case-study__wrapper row justify-content-around">
+                   <div className="case-study__block col col-lg-5">
                    <img src={image4} alt="logo"/>
                    </div>
-                   <div className="case-study__block">
+                   <div className="case-study__block col col-lg-5">
                    <div className="case-study__content">
                    <h1 className="case-study__subtitle">PEPsico</h1>
                    <h1 className="case-study__title">How Cristina got to work as GM &amp; Operation MG</h1>
@@ -210,12 +170,12 @@ function HomeMobile() {
                    </div>
                    
 
-                   <div className="case-study col col-6">
-                   <div className="case-study__wrapper row">
-                   <div className="case-study__block col col-6">
+                   <div className="case-study col col-lg-6">
+                   <div className="case-study__wrapper row justify-content-around">
+                   <div className="case-study__block col col-lg-5">
                    <img src={image5} alt="logo"/>
                    </div>
-                   <div className="case-study__block">
+                   <div className="case-study__block col col-lg-5">
                    <div className="case-study__content">
                    <h1 className="case-study__subtitle">P&amp;G</h1>
                    <h1 className="case-study__title">How Teresa started as <strong>Communications &amp; PR Manager </strong></h1>
@@ -227,8 +187,11 @@ function HomeMobile() {
                    </div>
                    </div>
 
+   
+
                    </div>
                    </div>
+
 
 
                    </div> 
