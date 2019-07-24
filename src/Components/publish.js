@@ -8,24 +8,21 @@ class Publish extends Component {
     return (
     <React.Fragment>
         <form>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email"></input>
-                </div>
-                <div class="form-group col-md-6">
-                <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password"></input>
-                </div>
-            </div>
+            <h1>Publicar empleo</h1>
+            <h3>Información del cargo</h3>
             <div class="form-group">
-                <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"></input>
+                <label for="exampleFormControlTextarea1">Descripción del cargo</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <div class="form-group">
-                <label for="inputAddress2">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"></input>
-            </div>
+            
+                <label for="inputAddress">Título empleo</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Front-End developer avanzada"></input>
+                <label for="inputState">Categoría de empleo</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose..</option>
+                    <option>...</option>
+                </select>
+            
             <div class="form-row">
                 <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
