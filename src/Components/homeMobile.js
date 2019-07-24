@@ -218,8 +218,8 @@ function HomeMobile() {
 
                    <div className="footer">
                    <div className="footer-newsletter">
-                   <div className="grid-x w-row">
-                   <div className="grid-column col col-lg-3 col-md-2">
+                   <div className="grid-x justify-content-around">
+                   <div className="grid-column col col-lg-3" id="footer-news">
                    <h6 className="footer-newsletter__title">Suscríbete a nuestro Newsletter</h6>
                    <div className="footer-newsletter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut sodales turpis.
                    </div>
@@ -256,8 +256,8 @@ function HomeMobile() {
                    </div>
                    </div>
 
-                   <div className="grid-x w-row">
-                   <div className="grid-column w-col w-col-3">
+                   <div className="grid-x justify-content-around">
+                   <div className="grid-column col col-3">
                    <img src={logo} id="logo-footer" alt="..."/>
                    <div className="footer-description">This is a digital platform and community that connect female talent with the very best companies that have this flexible offers for them. We are a trusted careers resource for women and a trusted talent resource for companies.
                    </div>
@@ -292,8 +292,30 @@ function HomeMobile() {
                    <li className="footer-menu__item"><a href="#" className="footer-menu__link">Contáctanos</a></li>
                    </ul>
                    </div>
+                   <div className="col col-3">
+                   <h6 className="footer__title">Síguenos</h6>
+                   <ul className="footer-social">
+                   <li className="footer-social__item"><a href="#" className="footer-social__link w-inline-block">
+                   <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566d79ccabf719603e2_fab-facebook-square%20(white).svg" alt="" className="footer-social__icon"/> 
+                   <div className="footer-social__text">/ProyectoMoms</div></a></li>
+                   <li class="footer-social__item"><a href="#" class="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566d79cca694a9603e1_fab-instagram%20(white).svg" alt="" class="footer-social__icon"/><div class="footer-social__text">@ProyectoMoms</div></a></li>
+                   <li class="footer-social__item"><a href="#" class="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5565d79cca54069603dd_fab-twitter%20(white).svg" alt="" class="footer-social__icon"/><div class="footer-social__text">@ProyectoMoms</div></a></li>
+                   <li class="footer-social__item"><a href="#" class="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566462b9967dfc40635_fab-youtube%20(white).svg" alt="" class="footer-social__icon"/><div class="footer-social__text">/ProyectoMoms</div></a></li>
+                   </ul>
+                   </div>
+                   </div>
+                   </div>
+                   </div>
 
-
+                   <div class="footer-copyright">
+                   <div class="grid-x justify-content-around">
+                   <div class="grid-column col col-6">
+                   <div class="footer-copyright__text">© Copyright ProyectoMoms 2019. Todos los Derechos Reservados.
+                   </div>
+                   </div>
+                   <div class="grid-column col col-6">
+                   <div class="footer-copyright__text footer-copyright__text--right">Sitio Web diseñado por <strong>Sebastián Rocha</strong>.
+                   </div>
                    </div>
                    </div>
                    </div>
