@@ -1,52 +1,66 @@
 import React, { Component } from 'react';
 import './../css/dashboard.css';
+import Nav from './navbar';
+import avatar from '../img/avatar.png';
+import config from '../firebase/config'
 
 
 class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.logout = this.logout.bind(this);
+    }
+
+
+    logout() {
+        config.auth().signOut();
+    }
+
     render() {
   return (
       <React.Fragment>
-         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
-        <div class="flex-row d-flex">
-            <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
-                <span class="navbar-toggler-icon"></span>
+         <Nav className="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
+        <div className="flex-row d-flex">
+            <button type="button" className="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
+                <span className="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">Admin Template</a>
+            <a className="navbar-brand" href="/#" title="Free Bootstrap 4 Admin Template">hola</a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-            <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse collapse" id="collapsingNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">Home</span></a>
+        <div className="navbar-collapse collapse" id="collapsingNavbar">
+            <ul className="navbar-nav">
+                <li className="nav-item active">
+                    <a className="nav-link" href="/#">Home <span className="sr-only">Home</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="//www.codeply.com">Link</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="//www.codeply.com">Link</a>
                 </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>
+            <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                    <a className="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link"  data-target="#myModal" data-toggle="modal">About</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="/#" data-target="#myModal" data-toggle="modal">About</a>
                 </li>
             </ul>
         </div>
-    </nav>
+    </Nav>
     <div className="container-fluid" id="main">
         <div className="row row-offcanvas row-offcanvas-left">
             <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
                 <ul className="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                    <li className="nav-item"><a class="nav-link" href="#">Overview</a></li>
+                    <li className="nav-item"><a class="nav-link" href="/#">Overview</a></li>
                     <li className="nav-item">
                         <a className="nav-link" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Reports▾</a>
                         <ul className="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
-                        <li class="nav-item"><a class="nav-link" href="">Report 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Report 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#">Report 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#">Report 2</a></li>
                         </ul>
                     </li>
+                    <button onClick={this.logout}>Cerrar sesión</button>
                    
                 </ul>
             </div>
@@ -116,7 +130,7 @@ class Dashboard extends Component {
                 <hr></hr>
                 <div class="row placeholders mb-3">
                     <div class="col-6 col-sm-3 placeholder text-center">
-                        <img src="//placehold.it/200/dddddd/fff?text=1" class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail"></img>
+                        <img src={avatar} class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail"></img>
                         <h4>Responsive</h4>
                         <span class="text-muted">Device agnostic</span>
                     </div>
@@ -137,24 +151,24 @@ class Dashboard extends Component {
                     </div>
                 </div>
 
-                <a id="features"></a>
+                
                 <hr></hr>
                 
                 <div class="row my-4">
                     <div class="col-lg-3 col-md-4">
                         <div class="card">
-                            <img class="card-img-top img-fluid" src="//placehold.it/740x180/bbb/fff?text=..." alt="Card image cap"></img>
+                            <img class="card-img-top img-fluid" src="//placehold.it/740x180/bbb/fff?text=..." alt="Card cap"></img>
                             <div class="card-body">
                                 <h4 class="card-title">Layouts</h4>
                                 <p class="card-text">Flexbox provides simpler, more flexible layout options like vertical centering.</p>
-                                <a href="#" class="btn btn-primary">Button</a>
+                                <a href="/#" class="btn btn-primary">Button</a>
                             </div>
                         </div>
                         <div class="card card-inverse bg-inverse mt-3">
                             <div class="card-body">
                                 <h3 class="card-title">Flexbox</h3>
                                 <p class="card-text">Flexbox is now the default, and Bootstrap 4 supports SASS out of the box.</p>
-                                <a href="#" class="btn btn-outline-secondary">Outline</a>
+                                <a href="/#" class="btn btn-outline-secondary">Outline</a>
                             </div>
                         </div>
                     </div>

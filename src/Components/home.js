@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 function Home() {
 
@@ -27,7 +27,7 @@ function Home() {
         <div class="header-content__block col col-lg-3 col-md-auto">
         <ul class="header-login">
             <li class="header-login__item"><a href="#" class="header-login__button header-login__button--bordered w-button">INGRESA</a></li>
-            <li class="header-login__item"><a href="#" class="header-login__button header-login__button--pink w-button">ÚNETE</a></li>
+            <li class="header-login__item"><a href="#" class="header-login__button header-login__button--pink w-button">Únete</a></li>
         </ul>
         </div>
        
@@ -56,9 +56,11 @@ function Home() {
             </div>
             </div>
             </div>
+            
             </div><a href="#home-purpose" class="home-intro__anchor inline-block">
             <div class="home-intro__anchor__text">Conoce más</div>
-            <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0f4be94c92b46e721f933a_arrow-down_white.svg" alt="" class="home-intro__anchor__arrow"/></a></div><div id="home-purpose" class="home-purpose">
+            <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0f4be94c92b46e721f933a_arrow-down_white.svg" alt="" class="home-intro__anchor__arrow"/></a></div>
+            <div id="home-purpose" class="home-purpose">
             <div class="home-heading">
             <div class="home-heading__wrapper">
             <h1 class="home-heading__subtitle home-heading__subtitle--pink">Our Purpose</h1>
@@ -339,3 +341,4 @@ function Home() {
 }
 
 export default Home
+ */

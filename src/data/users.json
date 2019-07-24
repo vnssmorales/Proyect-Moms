@@ -1,10 +1,57 @@
 {
     "candidates": [{
-        "name": "Arica y Parinacota",
-        "country": ["Arica", "Camarones", "Putre", "General Lagos"]
+        "name": "Juanita del Carmen",
+        "email": "juanitadelcarmen99@gmail.com",
+        "phone": "+569 8765 2719",
+        "profession": "Periodista",
+        "interestArea": "tecnologia",
+        "availability": "part-time",
+        "salary": "100.000"
+    },
+    
+    {
+        "name": "Juanita del Carmen",
+        "email": "juanitadelcarmen99@gmail.com",
+        "phone": "+569 8765 2719",
+        "profession": "Periodista",
+        "interestArea": "tecnologia",
+        "availability": "part-time",
+        "salary": "100.000"
     },
     {
-        "region": "Tarapacá",
-        "comunas": ["Iquique", "Alto Hospicio", "Pozo Almonte", "Camiña", "Colchane", "Huara", "Pica"]
+        "name": "Juanita del Carmen",
+        "email": "juanitadelcarmen99@gmail.com",
+        "phone": "+569 8765 2719",
+        "profession": "Periodista",
+        "interestArea": "tecnologia",
+        "availability": "part-time",
+        "salary": "100.000"
+    },
+    {
+        "name": "Juanita del Carmen",
+        "email": "juanitadelcarmen99@gmail.com",
+        "phone": "+569 8765 2719",
+        "profession": "Periodista",
+        "interestArea": "tecnologia",
+        "availability": "part-time",
+        "salary": "100.000"
+    },
+    {
+        "name": "Juanita del Carmen",
+        "email": "juanitadelcarmen99@gmail.com",
+        "phone": "+569 8765 2719",
+        "profession": "Periodista",
+        "interestArea": "tecnologia",
+        "availability": "part-time",
+        "salary": "100.000"
+    },
+    {
+        "name": "Juanita del Carmen",
+        "email": "juanitadelcarmen99@gmail.com",
+        "phone": "+569 8765 2719",
+        "profession": "Periodista",
+        "interestArea": "tecnologia",
+        "availability": "part-time",
+        "salary": "100.000"
     }]
 }
