@@ -1,7 +1,5 @@
 /* import React from 'react'
-
 function Home() {
-
   return (
     <React.Fragment>
         <header className="header header--fixed" Style="padding-left:10px;">
@@ -11,7 +9,6 @@ function Home() {
         <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0f5127e9f177b7c3efa3f4_logo-pm_v1-white.svg" alt="" className="header-content__logo"/>
         </a>
         </div>
-
         <div className="header-content__block col col-lg-7 col-md-6">
         <ul className="header-nav">
             <li className="header-nav__item"><a href="/about" className="header-nav__link header-nav__link--small">Sobre nosotros</a></li>
@@ -23,7 +20,6 @@ function Home() {
             </li>
         </ul>
         </div>
-
         <div class="header-content__block col col-lg-3 col-md-auto">
         <ul class="header-login">
             <li class="header-login__item"><a href="#" class="header-login__button header-login__button--bordered w-button">INGRESA</a></li>
@@ -41,7 +37,6 @@ function Home() {
             <h1 class="home-intro__subtitle">Trusted by more than a thousand women and companies</h1>
             <h1 class="home-intro__title home-intro__title--playfair">We connect female talent with the very best companies that have flexible offers for them.</h1>
             </div>
-
             <div class="home-intro__content row justify-content-around">
             <div class="home-intro__column col col-lg-6 col-md-4">
             <div class="home-block home-block--fill">
@@ -56,7 +51,6 @@ function Home() {
             </div>
             </div>
             </div>
-            
             </div><a href="#home-purpose" class="home-intro__anchor inline-block">
             <div class="home-intro__anchor__text">Conoce más</div>
             <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0f4be94c92b46e721f933a_arrow-down_white.svg" alt="" class="home-intro__anchor__arrow"/></a></div>
@@ -110,6 +104,7 @@ function Home() {
             <div class="home-heading__text home-heading__text--white">Mejoramos tu representación de género y te guiamos con mejores prácticas de mercado.<br/></div>
             </div>
             </div>
+            
             <div class="home-services__container row justify-content-around">
             <div class="service-block col col-lg-4 col-md-3">
             <div class="service-block__wrapper">
@@ -339,6 +334,5 @@ function Home() {
     </React.Fragment>
   );
 }
-
 export default Home
  */

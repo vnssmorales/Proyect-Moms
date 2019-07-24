@@ -116,7 +116,7 @@ regiones = () =>{
     <div className="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck"></input>
       <label class="form-check-label" for="gridCheck">
-        Al aceptar se aceptan los terminos y condiciones de uso
+        Check me out
       </label>
     </div>
   </div>

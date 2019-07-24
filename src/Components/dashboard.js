@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './../css/dashboard.css';
 import Nav from './navbar';
 import avatar from '../img/avatar.png';
-import config from '../firebase/config'
+import config from '../firebase/config';
+import { Link } from 'react-router-dom'
 
 
 class Dashboard extends Component {
@@ -60,7 +61,7 @@ class Dashboard extends Component {
                         <li class="nav-item"><a class="nav-link" href="/#">Report 2</a></li>
                         </ul>
                     </li>
-                    <button onClick={this.logout}>Cerrar sesión</button>
+                    <Link to="/"><button onClick={this.logout}>Cerrar sesión</button></Link>
                    
                 </ul>
             </div>
@@ -126,7 +127,6 @@ class Dashboard extends Component {
                     </div>
                 </div>
             
-
                 <hr></hr>
                 <div class="row placeholders mb-3">
                     <div class="col-6 col-sm-3 placeholder text-center">
@@ -150,7 +150,6 @@ class Dashboard extends Component {
                         <span class="text-muted">CSS and JavaScript</span>
                     </div>
                 </div>
-
                 
                 <hr></hr>
                 
@@ -254,19 +253,15 @@ class Dashboard extends Component {
                     </div>
                 </div>
               
-
                 
-
             </div>
             
         </div>
-
     </div>
   
     <footer class="container-fluid" Style="background-color: #355E7E ">
         <p class="text-right small">©2016-2018 Company</p>
     </footer>
-
    
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -292,11 +287,8 @@ class Dashboard extends Component {
             </div>
         </div>
     </div>
-
-
     </React.Fragment>
   );
 }
 }
-
 export default Dashboard

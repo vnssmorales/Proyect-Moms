@@ -41,10 +41,10 @@ class App extends Component {
   <BrowserRouter>
     <Switch>
     
-    <Route exact path="/login" component={Login} />
+    <Route exact path="/login" component={this.state.user ?  Dashboard : Login}/>
     <Route exact path="/register" component={Register} />
     <Route exact path="/" component={HomeMobile} />
-    <Route exact path="/dashboard" component={Dashboard} />
+    <Route exact path="/dashboard" component={this.state.user ?  Dashboard : Login} />
     <Route exact path="/home" component={HomeMobile} />
 
     </Switch>
