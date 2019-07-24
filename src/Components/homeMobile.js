@@ -136,7 +136,7 @@ function HomeMobile() {
                                 <div className="service-block__info">
                                     <h3 class="service-block__subtitle">Contrata a una mamá experta por tiempo acotado y con un objetivo claro</h3>
                                     <div class="service-block__text">Podemos entregarte a las mujeres más talentosas del mercado para desarrollar los proyectos que necesitas. Conoce a este grupo de mamás expertas y flexibles que adecuarán sus horarios para cubrir las necesidades de tu negocio.
-                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
