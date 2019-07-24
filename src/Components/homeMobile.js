@@ -181,7 +181,7 @@ function HomeMobile() {
                    </div>
                    
                    <div className="home-services__actions">
-                   <div className="home-services__wrapper"><a href="#" class="case-studies__button w-button">See more Case Studies</a>
+                   <div className="home-services__wrapper"><a href="#" className="case-studies__button w-button">See more Case Studies</a>
                    </div>
                    </div>
                    </div>
@@ -298,23 +298,23 @@ function HomeMobile() {
                    <li className="footer-social__item"><a href="#" className="footer-social__link w-inline-block">
                    <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566d79ccabf719603e2_fab-facebook-square%20(white).svg" alt="" className="footer-social__icon"/> 
                    <div className="footer-social__text">/ProyectoMoms</div></a></li>
-                   <li class="footer-social__item"><a href="#" class="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566d79cca694a9603e1_fab-instagram%20(white).svg" alt="" class="footer-social__icon"/><div class="footer-social__text">@ProyectoMoms</div></a></li>
-                   <li class="footer-social__item"><a href="#" class="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5565d79cca54069603dd_fab-twitter%20(white).svg" alt="" class="footer-social__icon"/><div class="footer-social__text">@ProyectoMoms</div></a></li>
-                   <li class="footer-social__item"><a href="#" class="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566462b9967dfc40635_fab-youtube%20(white).svg" alt="" class="footer-social__icon"/><div class="footer-social__text">/ProyectoMoms</div></a></li>
+                   <li className="footer-social__item"><a href="#" className="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566d79cca694a9603e1_fab-instagram%20(white).svg" alt="" className="footer-social__icon"/><div className="footer-social__text">@ProyectoMoms</div></a></li>
+                   <li className="footer-social__item"><a href="#" className="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5565d79cca54069603dd_fab-twitter%20(white).svg" alt="" className="footer-social__icon"/><div className="footer-social__text">@ProyectoMoms</div></a></li>
+                   <li className="footer-social__item"><a href="#" className="footer-social__link w-inline-block"><img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0e5566462b9967dfc40635_fab-youtube%20(white).svg" alt="" className="footer-social__icon"/><div className="footer-social__text">/ProyectoMoms</div></a></li>
                    </ul>
                    </div>
                    </div>
                    </div>
                    </div>
 
-                   <div class="footer-copyright">
-                   <div class="grid-x justify-content-around">
-                   <div class="grid-column col col-6">
-                   <div class="footer-copyright__text">© Copyright ProyectoMoms 2019. Todos los Derechos Reservados.
+                   <div className="footer-copyright">
+                   <div className="grid-x justify-content-around">
+                   <div className="grid-column col col-6">
+                   <div className="footer-copyright__text">© Copyright ProyectoMoms 2019. Todos los Derechos Reservados.
                    </div>
                    </div>
-                   <div class="grid-column col col-6">
-                   <div class="footer-copyright__text footer-copyright__text--right">Sitio Web diseñado por <strong>Sebastián Rocha</strong>.
+                   <div className="grid-column col col-6">
+                   <div className="footer-copyright__text footer-copyright__text--right">Sitio Web diseñado por <strong>Sebastián Rocha</strong>.
                    </div>
                    </div>
                    </div>
