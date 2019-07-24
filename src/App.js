@@ -7,7 +7,8 @@ import Register from './Components/register';
 import  HomeMobile from './Components/homeMobile';
 
 import Dashboard from './Components/dashboard';
-import config from './firebase/config'
+import config from './firebase/config';
+import Publish from './Components/publish'
 
 
 class App extends Component {
@@ -43,9 +44,9 @@ class App extends Component {
     <Route exact path="/login" component={this.state.user ?  Dashboard : Login}/>
     <Route exact path="/register" component={this.state.user ?  Dashboard : Register} />
     <Route exact path="/" component={HomeMobile} />
-    <Route exact path="/dashboard" component={this.state.user ?  Dashboard : Login} />
+    <Route  path="/dashboard" component={this.state.user ?  Dashboard : Login} />
     <Route exact path="/home" component={HomeMobile} />
-
+    
     </Switch>
   </BrowserRouter>
   );
