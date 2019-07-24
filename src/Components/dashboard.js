@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './../css/dashboard.css';
 import Nav from './navbar';
 import avatar from '../img/avatar.png';
-import config from '../firebase/config'
+import config from '../firebase/config';
+import { Link } from 'react-router-dom'
 
 
 class Dashboard extends Component {
@@ -60,7 +61,7 @@ class Dashboard extends Component {
                         <li class="nav-item"><a class="nav-link" href="/#">Report 2</a></li>
                         </ul>
                     </li>
-                    <button onClick={this.logout}>Cerrar sesión</button>
+                    <Link to="/"><button onClick={this.logout}>Cerrar sesión</button></Link>
                    
                 </ul>
             </div>

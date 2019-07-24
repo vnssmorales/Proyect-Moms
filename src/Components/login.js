@@ -24,7 +24,11 @@ class Login extends Component {
         e.preventDefault();
         config.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
             
+        }).then((res)=>{
+            console.log(res)
+            
         }).catch((error) => {
+           alert(error)
             console.log(error);
           });
       }
