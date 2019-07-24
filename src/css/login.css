@@ -1,0 +1,24 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-success{
+    margin-top: 25px !important;
+    color:#355E7E !important;
+}
+.card{
+    background-color:#EFEFEF; 
+    border-color:#EFEFEF;
+}
+#log{
+    background-color:#F85E76 !important;
+    width: 200px;
+    border-color:#F85E76;
+}
+#unete{
+    background-color:#F85E76 !important;
+    width: 200px;
+    border-color:#F85E76;
+}
+
+
