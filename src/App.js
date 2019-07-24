@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter , Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter , Route, Switch } from 'react-router-dom';
 import Login from './Components/login';
 import Register from './Components/register';
-import  Home from './Components/home';
 import  HomeMobile from './Components/homeMobile';
 
 import Dashboard from './Components/dashboard';
