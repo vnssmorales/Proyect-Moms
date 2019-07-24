@@ -307,7 +307,7 @@ function Home() {
               <li class="footer-menu__item"><a href="#" class="footer-menu__link">Contáctanos</a></li>
               </ul>
               </div>
-              
+
               <div class="w-col w-col-3">
               <h6 class="footer__title">Síguenos</h6>
               <ul class="footer-social">
@@ -322,6 +322,7 @@ function Home() {
               </div>
               </div>
               </div>
+              
               <div class="footer-copyright">
               <div class="grid-x w-row">
               <div class="grid-column w-col w-col-6">
