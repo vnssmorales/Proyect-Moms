@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import chile from '../data/chile.json';
 import Nav from './navbar';
 import config from '../firebase/config.js';
+import { Link } from 'react-router-dom';
 
 
 
@@ -116,11 +117,10 @@ regiones = () =>{
     <div className="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck"></input>
       <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
+      Al aceptar se aceptan los terminos y condiciones de uso</label>
     </div>
   </div>
-  <button onClick={this.signup} type="submit" class="btn btn-primary">Sign in</button>
+  <Link to="/dashboard"><button onClick={this.signup} type="submit" class="btn btn-primary">Sign in</button></Link>
 </form>
 </div>
 </div>

@@ -127,7 +127,6 @@ class Dashboard extends Component {
                     </div>
                 </div>
             
-
                 <hr></hr>
                 <div class="row placeholders mb-3">
                     <div class="col-6 col-sm-3 placeholder text-center">
@@ -151,7 +150,6 @@ class Dashboard extends Component {
                         <span class="text-muted">CSS and JavaScript</span>
                     </div>
                 </div>
-
                 
                 <hr></hr>
                 
@@ -255,19 +253,15 @@ class Dashboard extends Component {
                     </div>
                 </div>
               
-
                 
-
             </div>
             
         </div>
-
     </div>
   
     <footer class="container-fluid" Style="background-color: #355E7E ">
         <p class="text-right small">©2016-2018 Company</p>
     </footer>
-
    
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -293,11 +287,8 @@ class Dashboard extends Component {
             </div>
         </div>
     </div>
-
-
     </React.Fragment>
   );
 }
 }
-
 export default Dashboard
