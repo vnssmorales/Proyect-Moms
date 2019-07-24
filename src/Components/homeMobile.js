@@ -1,18 +1,31 @@
 import React from 'react';
 import '../homeMobile.css';
+<<<<<<< HEAD
 import {Link} from 'react-router-dom';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> dda3ff643ceb4b19a1bdd2334d1b494f21c54c58
 import image1 from '../img/home-purpose_1.jpg';
 import image2 from '../img/home-purpose_2.jpg';
 import image3 from '../img/home-purpose_3.jpg';
 import image4 from '../img/case-study1.jpg';
 import image5 from '../img/case-study2.jpg';
+<<<<<<< HEAD
 
+=======
+>>>>>>> dda3ff643ceb4b19a1bdd2334d1b494f21c54c58
 import Nav from './navbar';
 
 function HomeMobile() {
     return (
         <React.Fragment>
+<<<<<<< HEAD
                   <Nav></Nav>
+=======
+                      
+                  <Nav></Nav>
+
+>>>>>>> dda3ff643ceb4b19a1bdd2334d1b494f21c54c58
                     <div className="main-container">
 
                     <div className="home-intro">
@@ -132,11 +145,13 @@ function HomeMobile() {
                    <div className="home-services__actions">
                    <div className="home-services__wrapper">
                    <h6 className="home-services__title">¿Listo para trabajar?</h6>
-                   <Link to="/login"> <button type="button" className="btn btn-light m-2" id="ingresarEmp">Registra tu empresa</button></Link>
+                   <Link to="/register"> <button type="button" className="btn btn-light m-2" id="ingresarEmp">Registra tu empresa</button></Link>
                    </div>
                    </div>
                    </div>
                    </div>
+
+
 
                    <div className="case-studies">
                    <div className="home-heading">
@@ -147,12 +162,13 @@ function HomeMobile() {
                    </div>
 
                    <div className="case-studies row justify-content-around">
-                   <div className="case-study col col-6">
-                   <div className="case-study__wrapper row">
-                   <div className="case-study__block col col-6">
+                   
+                   <div className="case-study col col-lg-6">
+                   <div className="case-study__wrapper row justify-content-around">
+                   <div className="case-study__block col col-lg-5">
                    <img src={image4} alt="logo"/>
                    </div>
-                   <div className="case-study__block">
+                   <div className="case-study__block col col-lg-5">
                    <div className="case-study__content">
                    <h1 className="case-study__subtitle">PEPsico</h1>
                    <h1 className="case-study__title">How Cristina got to work as GM &amp; Operation MG</h1>
@@ -165,12 +181,12 @@ function HomeMobile() {
                    </div>
                    
 
-                   <div className="case-study col col-6">
-                   <div className="case-study__wrapper row">
-                   <div className="case-study__block col col-6">
+                   <div className="case-study col col-lg-6">
+                   <div className="case-study__wrapper row justify-content-around">
+                   <div className="case-study__block col col-lg-5">
                    <img src={image5} alt="logo"/>
                    </div>
-                   <div className="case-study__block">
+                   <div className="case-study__block col col-lg-5">
                    <div className="case-study__content">
                    <h1 className="case-study__subtitle">P&amp;G</h1>
                    <h1 className="case-study__title">How Teresa started as <strong>Communications &amp; PR Manager </strong></h1>
@@ -182,11 +198,15 @@ function HomeMobile() {
                    </div>
                    </div>
 
+   
+
                    </div>
                    </div>
+
 
 
                    </div> 
+
         </React.Fragment>
     );
 }
