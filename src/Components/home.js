@@ -51,6 +51,7 @@ function Home() {
             </div>
             </div>
             </div>
+
             </div><a href="#home-purpose" class="home-intro__anchor inline-block">
             <div class="home-intro__anchor__text">Conoce más</div>
             <img src="https://assets.website-files.com/5d0e42dd41baf263120aa3ab/5d0f4be94c92b46e721f933a_arrow-down_white.svg" alt="" class="home-intro__anchor__arrow"/></a></div>
