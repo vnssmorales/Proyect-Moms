@@ -1,18 +1,22 @@
 import React from 'react';
 import '../homeMobile.css';
-import logo from '../img/logo.svg';
 import {Link} from 'react-router-dom';
+<<<<<<< HEAD
 import image1 from '../img/home-purpose_1.jpg';
 import image2 from '../img/home-purpose_2.jpg';
 import image3 from '../img/home-purpose_3.jpg';
 import image4 from '../img/case-study1.jpg';
 import image5 from '../img/case-study2.jpg';
+=======
+import Nav from './navbar';
+>>>>>>> bf282a383000d49910f0bff73dc864bc43160c50
 
 function HomeMobile() {
     return (
 
         <React.Fragment>
                       
+<<<<<<< HEAD
                     <nav className="navbar navbar-expand-lg navbar-dark bg-light">
                         <div className="logomoms col col-lg-2 col-md-2">
                         <Link to="/home"><img src={logo} alt="logo"/></Link>
@@ -50,6 +54,9 @@ function HomeMobile() {
                              <Link to="register"> <button type="button" className="btn btn-light m-2" id="unete">ÚNETE</button></Link>
                             </div>
                     </nav>
+=======
+                  <Nav></Nav>
+>>>>>>> bf282a383000d49910f0bff73dc864bc43160c50
 
                     <div className="main-container">
 

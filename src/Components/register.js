@@ -1,10 +1,33 @@
 import React, { Component } from 'react';
 import chile from '../data/chile.json';
+import Nav from './navbar';
+import config from '../firebase/config.js';
 
 
 
 class Register extends Component{
- 
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.signup = this.signup.bind(this);
+    this.state = {
+      email: '',
+      password: ''
+    };
+  }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  signup(e){
+    e.preventDefault();
+    config.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+    }).then((u)=>{console.log(u)})
+    .catch((error) => {
+        console.log(error);
+      })
+  }
 
 regiones = () =>{
   chile.regiones.forEach(element => {
@@ -14,20 +37,7 @@ regiones = () =>{
   render(){
   return (
     <React.Fragment>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link">Features</a>
-      <a class="nav-item nav-link">Pricing</a>
-      <a class="nav-item nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
-    </div>
-  </div>
-</nav>
+      <Nav></Nav>
       <div  Style="padding:9%; background-color:#355E7E">
       <div className="card" Style="padding: 20px">
     <form>
@@ -35,11 +45,11 @@ regiones = () =>{
   <div className="form-row">
     <div className="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electrónico"></input>
+      <input type="email" value={this.state.email} name="email"  onChange={this.handleChange} class="form-control" id="inputEmail4" placeholder="Correo electrónico"></input>
     </div>
     <div className="form-group col-md-6">
       <label for="inputPassword4">Contraseña</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña"></input>
+      <input value={this.state.password} name="password"  onChange={this.handleChange} type="password" class="form-control" id="inputPassword4" placeholder="Contraseña"></input>
     </div>
     <div className="col">
     <label for="inputEmail4">Nombre</label>
@@ -110,7 +120,7 @@ regiones = () =>{
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button onClick={this.signup} type="submit" class="btn btn-primary">Sign in</button>
 </form>
 </div>
 </div>

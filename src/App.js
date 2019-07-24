@@ -1,28 +1,56 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter , Route, Switch } from 'react-router-dom';
+import { BrowserRouter , Route, Switch, Redirect } from 'react-router-dom';
 import Login from './Components/login';
 import Register from './Components/register';
 import  Home from './Components/home';
 import  HomeMobile from './Components/homeMobile';
-import loginGoogle from './Components/firebaseLoginGoogle';
+
+import Dashboard from './Components/dashboard';
+import config from './firebase/config'
 
 
-function App() {
+class App extends Component {
+  constructor() {
+    super();
+    this.state = ({
+      user: null,
+    });
+    this.authListener = this.authListener.bind(this);
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }
+
+  authListener() {
+    config.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem('user', user.uid);
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem('user');
+      }
+    });
+  }
+  render(){
   return (
   <BrowserRouter>
     <Switch>
-
-    <Route exact path="/home" component={HomeMobile} />
-    <Route exact path="/ejemplo" component={Home}/>
-    <Route exact path="/login" component={Login}/>
-    <Route exact path="/register" component={Register}/>
-    <Route exact path="/loginGoogle" component={loginGoogle}/>
     
+    <Route exact path="/login" component={this.state.user ?  Dashboard : Login}/>
+    <Route exact path="/register" component={Register} />
+    <Route exact path="/" component={HomeMobile} />
+    <Route exact path="/dashboard" component={this.state.user ?  Dashboard : Login} />
+    <Route exact path="/home" component={HomeMobile} />
+
     </Switch>
   </BrowserRouter>
   );
+}
 }
 
 export default App
