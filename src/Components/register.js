@@ -1,11 +1,33 @@
 import React, { Component } from 'react';
 import chile from '../data/chile.json';
 import Nav from './navbar';
+import config from '../firebase/config.js';
 
 
 
 class Register extends Component{
- 
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.signup = this.signup.bind(this);
+    this.state = {
+      email: '',
+      password: ''
+    };
+  }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  signup(e){
+    e.preventDefault();
+    config.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+    }).then((u)=>{console.log(u)})
+    .catch((error) => {
+        console.log(error);
+      })
+  }
 
 regiones = () =>{
   chile.regiones.forEach(element => {
@@ -23,11 +45,11 @@ regiones = () =>{
   <div className="form-row">
     <div className="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Correo electrónico"></input>
+      <input type="email" value={this.state.email} name="email"  onChange={this.handleChange} class="form-control" id="inputEmail4" placeholder="Correo electrónico"></input>
     </div>
     <div className="form-group col-md-6">
       <label for="inputPassword4">Contraseña</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña"></input>
+      <input value={this.state.password} name="password"  onChange={this.handleChange} type="password" class="form-control" id="inputPassword4" placeholder="Contraseña"></input>
     </div>
     <div className="col">
     <label for="inputEmail4">Nombre</label>
@@ -98,7 +120,7 @@ regiones = () =>{
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button onClick={this.signup} type="submit" class="btn btn-primary">Sign in</button>
 </form>
 </div>
 </div>
