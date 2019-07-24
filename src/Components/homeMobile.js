@@ -139,7 +139,6 @@ function HomeMobile() {
                    </div>
 
 
-
                    <div className="case-studies">
                    <div className="home-heading">
                    <div className="home-heading__wrapper">
@@ -184,10 +183,28 @@ function HomeMobile() {
                    </div>
                    </div>
                    </div>
-
-   
-
                    </div>
+
+                   <div className="case-studies row justify-content-around">
+                  
+                   <div className="card" id="case-study">
+                   <img src={image4} className="card-img-top" alt="..."/>
+                   <div className="card-body">
+                   <h1 className="case-study__subtitle">P&amp;G</h1>
+                   <h5 className="card-title">Work-Life Balance</h5>
+                   <p className="card-text">Buscamos que tengas un balance entre tu vida personal y profesional, sin dejar de lado tus sueños.</p>
+                 </div>
+                 </div>
+                   </div>
+
+                   <div className="card" id="case-study1">
+                   <img src={image5} className="card-img-top" alt="..."/>
+                   <div className="card-body">
+                   <h5 className="card-title">Work-Life Balance</h5>
+                   <p className="card-text">Buscamos que tengas un balance entre tu vida personal y profesional, sin dejar de lado tus sueños.</p>
+                 </div>
+                 </div>
+                   
                    </div>
 
 
