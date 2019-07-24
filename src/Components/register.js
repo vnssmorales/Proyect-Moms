@@ -92,7 +92,7 @@ class Register extends Component{
     </div>
   </div>
   </div>
-  <Link to="/dashboard"><button onClick={this.signup} type="submit" class="btn btn-primary" id="init">INICIAR SESIÓN</button></Link>
+  <Link to="/dashboard"><button onClick={this.signup} type="submit" class="btn btn-primary" id="init">REGISTRARSE</button></Link>
 </form>
 </div>
 </div>
