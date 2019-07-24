@@ -204,6 +204,7 @@ function Home() {
             </div>
             </div>
             </div>
+
             <div class="web-clients">
             <div class="grid-x">
             <div class="grid-cell">
@@ -258,6 +259,7 @@ function Home() {
             </div>
             </div>
             </form>
+
             <div class="w-form-done">
             <div>Thank you! Your submission has been received!
             </div>
@@ -305,6 +307,7 @@ function Home() {
               <li class="footer-menu__item"><a href="#" class="footer-menu__link">Contáctanos</a></li>
               </ul>
               </div>
+              
               <div class="w-col w-col-3">
               <h6 class="footer__title">Síguenos</h6>
               <ul class="footer-social">

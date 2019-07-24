@@ -61,6 +61,15 @@
     background-color: #254863;
 }
 
-#case-study, #case-study1{
-    width: 22rem;
+#case-study, #case-study1, #case-study-text, #case-study-text1{
+    width: 16rem;
+    height: 16rem;
+}
+
+#row-case-studies{
+    min-height: 360px;
+}
+
+#logo-footer{
+   width: 150px;
 }
