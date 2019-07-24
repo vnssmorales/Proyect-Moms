@@ -56,8 +56,8 @@ function HomeMobile() {
                    <div className="home-purpose">
                    <div className="home-heading__wrapper">
                    <h1 className="home-heading__subtitle home-heading__subtitle--pink">Nuestro enfoque</h1>
-                   <h1 className="home-heading__title">The maternity GAP is the real GAP</h1>
-                   <div className="home-heading__text">Being a working mom is a real challenge, that’s the real gap. So, companies need to innovate the way they seek for female talent.</div>
+                   <h1 className="home-heading__title">Ten el talento que buscas según tu medida</h1>
+                   <div className="home-heading__text"></div>
                    </div>
                    </div>       
 
@@ -65,22 +65,16 @@ function HomeMobile() {
                    <div className="card" id="purpose">
                    <img src={image1} className="card-img-top" alt="..."/>
                    <div className="card-body">
-                   <h5 className="card-title">Fit cultural</h5>
-                   <p className="card-text">Te ofrecemos oportunidades laborales en empresas que tienen programas de atracción y retención de mujeres profesionales.</p>
+                   <h5 className="card-title">El mejor Fit</h5>
+                   <p className="card-text">Encuentra la candidata que más se ajuste a tus requerimientos específicos</p>
                  </div>
                  </div>
-                 <div className="card" id="purpose2">
-                   <img src={image2} className="card-img-top" alt="..."/>
-                   <div className="card-body">
-                   <h5 className="card-title">Work-Life Balance</h5>
-                   <p className="card-text">Buscamos que tengas un balance entre tu vida personal y profesional, sin dejar de lado tus sueños.</p>
-                 </div>
-                 </div>
+                 
                  <div className="card" id="purpose3">
                    <img src={image3} className="card-img-top" alt="..."/>
                    <div className="card-body">
-                   <h5 className="card-title">Flexibility</h5>
-                   <p className="card-text">Puedes elegir el tipo de trabajo que quieras, según el tiempo que tengas disponible: Part-time, Full-time o Proyectos individuales.</p>
+                   <h5 className="card-title">Gestionamos</h5>
+                   <p className="card-text">Te ayudamos a gestionar la cantidad de posibles postulantes según el tipo de trabajo: Part-time, Full-time o Proyectos individuales.</p>
                  </div>
                  </div>
                    
@@ -298,6 +292,8 @@ function HomeMobile() {
                    <li className="footer-menu__item"><a href="#" className="footer-menu__link">Contáctanos</a></li>
                    </ul>
                    </div>
+
+
                    </div>
                    </div>
                    </div>
