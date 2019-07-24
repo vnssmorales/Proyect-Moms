@@ -1,31 +1,18 @@
 import React from 'react';
 import '../homeMobile.css';
-<<<<<<< HEAD
-import {Link} from 'react-router-dom';
-=======
 import { Link } from 'react-router-dom';
->>>>>>> dda3ff643ceb4b19a1bdd2334d1b494f21c54c58
 import image1 from '../img/home-purpose_1.jpg';
 import image2 from '../img/home-purpose_2.jpg';
 import image3 from '../img/home-purpose_3.jpg';
 import image4 from '../img/case-study1.jpg';
 import image5 from '../img/case-study2.jpg';
-<<<<<<< HEAD
-
-=======
->>>>>>> dda3ff643ceb4b19a1bdd2334d1b494f21c54c58
 import Nav from './navbar';
 
 function HomeMobile() {
     return (
         <React.Fragment>
-<<<<<<< HEAD
-                  <Nav></Nav>
-=======
-                      
                   <Nav></Nav>
 
->>>>>>> dda3ff643ceb4b19a1bdd2334d1b494f21c54c58
                     <div className="main-container">
 
                     <div className="home-intro">
