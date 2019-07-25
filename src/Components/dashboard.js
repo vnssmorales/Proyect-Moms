@@ -7,7 +7,9 @@ import avatar from '../img/avatar.png';
 import config from '../firebase/config';
 import Publish from './publish';
 import Publications from './publications';
-import Profile from './profile'
+import Profile from './profile';
+import Default from './default';
+import { db } from './../firebase/config'
 
 
 class Dashboard extends Component{
@@ -17,17 +19,20 @@ class Dashboard extends Component{
             showComponentPublish: false,
             showComponentPublications: false,
             showComponentProfile: false,
+            showComponentDefault: true
           };
         this._onButtonClick = this._onButtonClick.bind(this);
         this.logout = this.logout.bind(this);
     }
+    
+      _onButtonClick(name) {
 
-    _onButtonClick(name) {
         if(name == "publish"){
             this.setState({
                 showComponentPublish: true,
                 showComponentPublications: false,
                 showComponentProfile: false,
+                showComponentDefault: false
                 
             })
         }else if(name == "publications"){
@@ -35,13 +40,24 @@ class Dashboard extends Component{
                 showComponentPublications: true,
                 showComponentPublish: false,
                 showComponentProfile: false,
+                showComponentDefault: false
             })
         }else if(name == "profile"){
             this.setState({
                 showComponentProfile: true,
                 showComponentPublish: false,
                 showComponentPublications: false,
+                showComponentDefault: false
             })
+        }else if(name == "atrás"){
+            this.setState(prevState => ({
+            showComponentPublish: !prevState.showComponentPublish,
+            showComponentPublications: !prevState.showComponentPublications,
+            showComponentProfile: !prevState.showComponentProfile,
+            showComponentDefault: !prevState.showComponentDefault
+            }));
+        }else{
+            this.setState({showComponentDefault: true})
         }
       }
 
@@ -56,8 +72,10 @@ class Dashboard extends Component{
             return (<Publications/>)
         }else if(this.state.showComponentProfile){
             return (<Profile/>)
-        }else {
+        }else if(this.state.showComponentDefault){
             return null
+        }else{
+            return this.state
         }
     }
 
@@ -65,11 +83,11 @@ class Dashboard extends Component{
     render(){
 
   return (
-    <React.Fragment>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
-    <a className="navbar-brand">
+      <React.Fragment>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
+    <div className="logomoms col col-lg-2 col-md-2">
         <Link to="/home"><img src={logo} id="logo-nav" alt="logo"/></Link>
-    </a>
+    </div>
 
     <div className="info col col-lg-7 col-md-6">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,7 +116,6 @@ class Dashboard extends Component{
             {this.showComponent()}
             </div>
 
-            
    
     <div className="modal fade" id="myModal" tabIndex="-1" role="dialog">
         <div className="modal-dialog" role="document">

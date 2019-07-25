@@ -1,5 +1,22 @@
 body, html {
   height:100%;
+  margin:0px;
+  padding: 0px;
+}
+.bg-light{
+  background-color:  #EFEFEF;
+  margin-right:100px;
+}
+#main{
+  margin-top:50px;
+}
+#navigate{
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #EFEFEF;
+  position: fixed;
+  height: 100%;
 }
 
 /*
@@ -8,25 +25,28 @@ body, html {
  */
 @media screen and (max-width: 992px) {
 
-  .row-offcanvas {
+  #navigate{
+    width: 100%;
+    height: auto;
     position: relative;
-    -webkit-transition: all 0.25s ease-out;
-    -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
+    display: inline-block;
   }
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -33%;
+    left: 33%;
+    display: inline-block;
   }
 
   .row-offcanvas-left.active {
     left: 33%;
     margin-left: -6px;
+    display: inline-block;
   }
 
   .sidebar-offcanvas {
     position: absolute;
+    display: inline-block;
     top: 0;
     width: 33%;
     height: 100%;
@@ -40,7 +60,7 @@ body, html {
 @media screen and (max-width: 34em) {
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -45%;
+    left: -10%;
   }
 
   .row-offcanvas-left.active {

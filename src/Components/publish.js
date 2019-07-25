@@ -1,6 +1,31 @@
 import React, { Component } from "react";
 import "../css/publish.css";
+import Filters from "./filters";
+
 class Publish extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        showMoreFilters: false,
+      };
+    this.onButtonClick = this.onButtonClick.bind(this);
+}
+
+  onButtonClick(name) {
+    if(name == "filter"){
+        this.setState({
+            showMoreFilters: true
+            
+        })
+    }
+  }
+showComponent(){
+    if(this.state.showMoreFilters){
+       return (<Filters />)
+    }else {
+        return null
+    }
+}
   sendMail() {
     let to = "jferrada@vchile.cl";
     let subject = "probando el envio";
@@ -14,60 +39,89 @@ class Publish extends Component {
   render() {
     return (
       <React.Fragment>
-        <form>
-          <h1>Publicar empleo</h1>
+        <form id="publish">
+          <h1>Publica un empleo</h1>
           <h3>Información del cargo</h3>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">
+          <label htmlFor="inputAddress">Título empleo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="Ejemplo: Front-End developer avanzada"/>
+            <label htmlFor="inputState">Categoría de empleo</label>
+          <select id="inputState" class="form-control">
+            <option selected>Escoger</option>
+            <option>Administración</option>
+          </select>
+            <label htmlFor="exampleFormControlTextarea1">
               Descripción del cargo
             </label>
             <textarea
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
+              placeholder="Ejemplo: Tareas, beneficios etc.  "
             />
           </div>
 
-          <label for="inputAddress">Título empleo</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputAddress"
-            placeholder="Front-End developer avanzada"
-          />
-          <label for="inputState">Categoría de empleo</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose..</option>
-            <option>...</option>
-          </select>
+          
+          
 
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity" />
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputState">State</label>
+            <label htmlFor="inputState">Jornada Laboral</label>
               <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
+                <option defaultValue>Escoger</option>
+                <option>Proyecto</option>
+                <option>Part-time</option>
+                <option>Freelance</option>
+                <option>Full-time con flexibilidad</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+            <label htmlFor="inputState">Educación</label>
+              <select id="inputState" class="form-control">
+                <option selected>Escoger</option>
                 <option>...</option>
               </select>
             </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Zip</label>
-              <input type="text" class="form-control" id="inputZip" />
-            </div>
+            
           </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+            <label htmlFor="inputState">Rango renta</label>
+              <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              placeholder="Mínimo"/>
+            </div>
+            <div class="form-group col-md-6">
+            
+              <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              placeholder="Máximo"
+              style={{marginTop: "40px"}}/>
+              
+            </div>
+            
+          </div>
+
+       
           <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" />
-              <label class="form-check-label" for="gridCheck">
-                Check me out
-              </label>
-            </div>
+          <label htmlFor="inputState">¿Tu empresa tiene más necesidades?</label>
+          <button type="button" class="btn btn-light" onClick={() => this.onButtonClick("filter")}>
+            Añadir más filtros ▾
+          </button>
+
           </div>
+          {this.showComponent()}
+               
           <button type="button" class="btn btn-primary" onClick={this.sendMail}>
-            Sign in
+            Terminar publicación
           </button>
         </form>
         <footer className="container-fluid" style={{backgroundColor: "#355E7E "}}>
