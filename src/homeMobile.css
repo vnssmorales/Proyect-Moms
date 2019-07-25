@@ -61,7 +61,12 @@
     background-color: #254863;
 }
 
-
 #logo-footer, #logo-nav{
    width: 150px;
+}
+
+#aprende{
+    color: white;
+    background-color: transparent;
+    margin-top: 20px !important;
 }
