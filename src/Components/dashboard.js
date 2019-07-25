@@ -96,9 +96,9 @@ class Dashboard extends Component {
             </div>
         </Nav>
         
-    <div className="container-fluid" id="main">
-        <div className="row row-offcanvas row-offcanvas-left">
-            <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+    <div className="container-fluid" id="main" style={{padding:" 5px", backgroundColor:"#EFEFEF",  margin: "auto",}}>
+        <div className="row row-offcanvas row-offcanvas-left" style={{backgroundColor:"#EFEFEF"}}>
+            <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="navigate" role="navigation" style={{backgroundColor:"#EFEFEF"}}>
                 <ul className="nav flex-column sticky-top pl-0 pt-5 mt-3">
                     <li className="nav-item"><a href="javascript:void(0)" value="publications" onClick={() => this._onButtonClick("publications")}>Publicaciones</a></li>
                     <li className="nav-item"><a href="javascript:void(0)" name="publish" onClick={() => this._onButtonClick("publish")}>Publicar</a></li>
@@ -118,7 +118,7 @@ class Dashboard extends Component {
         </div>
     </div>
   
-    <footer className="container-fluid" style={{backgroundColor: "#355E7E "}}>
+    <footer className="container-fluid" style={{backgroundColor: "#EFEFEF"}}>
         <p className="text-right small">©2016-2018 Company</p>
     </footer>
    
