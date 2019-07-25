@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import logo from '../img/logo.svg';
-import { Link } from 'react-router-dom';
-import '../css/homeMobile.css';
 import './../css/dashboard.css';
+import Nav from './navbar';
 import avatar from '../img/avatar.png';
 import config from '../firebase/config';
+import { Link } from 'react-router-dom';
 import Publish from './publish';
 import Publications from './publications';
 import Profile from './profile'
 
 
-class Dashboard extends Component{
+
+class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,8 +21,8 @@ class Dashboard extends Component{
         this._onButtonClick = this._onButtonClick.bind(this);
         this.logout = this.logout.bind(this);
     }
-
-    _onButtonClick(name) {
+    
+      _onButtonClick(name) {
         if(name == "publish"){
             this.setState({
                 showComponentPublish: true,
@@ -43,7 +43,9 @@ class Dashboard extends Component{
                 showComponentPublications: false,
             })
         }
+        
       }
+    
 
     logout() {
         config.auth().signOut();
@@ -60,45 +62,64 @@ class Dashboard extends Component{
             return null
         }
     }
-
-
-    render(){
-
+    render() {
   return (
-    <React.Fragment>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
-    <a className="navbar-brand">
-        <Link to="/home"><img src={logo} id="logo-nav" alt="logo"/></Link>
-    </a>
-
-    <div className="info col col-lg-7 col-md-6">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-                <a href="javascript:void(0)" value="publications" onClick={() => this._onButtonClick("publications")}>Publicaciones<span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item active">
-                <a href="javascript:void(0)" name="publish" onClick={() => this._onButtonClick("publish")}>Publicar</a>
-            </li>
-            <li className="nav-item active">
-                <a href="javascript:void(0)" onClick={() => this._onButtonClick("profile")}>Perfil</a>
-            </li>
-            <li>
-            <Link to="/"> <button type="button" className="btn btn-light m-2 active mr-auto" id="salir">Cerrar Sesión</button></Link>
-            </li>
-        </ul>
-        </div>
-        </div>
-    </nav> 
-
-            <div className="col main pt-5 mt-3" id="col-main">
-            {this.showComponent()}
+      <React.Fragment>
+         <Nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
+            <div class="flex-row d-flex">
+                <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">Admin Template</a>
             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="collapsingNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="//www.codeply.com">Link</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+                    </li>
+                </ul>
+            </div>
+        </Nav>
+        
+    <div className="container-fluid" id="main">
+        <div className="row row-offcanvas row-offcanvas-left">
+            <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+                <ul className="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                    <li className="nav-item"><a href="javascript:void(0)" value="publications" onClick={() => this._onButtonClick("publications")}>Publicaciones</a></li>
+                    <li className="nav-item"><a href="javascript:void(0)" name="publish" onClick={() => this._onButtonClick("publish")}>Publicar</a></li>
+                    <li className="nav-item"><a href="javascript:void(0)" onClick={() => this._onButtonClick("profile")}>Perfil</a></li>
+                    <Link to="/"><button onClick={this.logout}>Cerrar sesión</button></Link>
+                   
+                </ul>
+            </div>
+        
 
+            <div className="col main pt-5 mt-3">
+            {this.showComponent()}
+                
+                
+            </div>
             
+        </div>
+    </div>
+  
+    <footer className="container-fluid" style={{backgroundColor: "#355E7E "}}>
+        <p className="text-right small">©2016-2018 Company</p>
+    </footer>
    
     <div className="modal fade" id="myModal" tabIndex="-1" role="dialog">
         <div className="modal-dialog" role="document">
@@ -125,7 +146,7 @@ class Dashboard extends Component{
         </div>
     </div>
     </React.Fragment>
-) }
+  );
 }
-
-export default Dashboard;
+}
+export default Dashboard

@@ -8,7 +8,7 @@ import  HomeMobile from './Components/homeMobile';
 
 import Dashboard from './Components/dashboard';
 import config from './firebase/config';
-import Publish from './Components/publish'
+import Publish from './Components/publish';
 
 
 class App extends Component {
@@ -46,7 +46,9 @@ class App extends Component {
     <Route exact path="/" component={HomeMobile} />
     <Route  path="/dashboard" component={this.state.user ?  Dashboard : Login} />
     <Route exact path="/home" component={HomeMobile} />
-    
+   
+  
+
     </Switch>
   </BrowserRouter>
   );
