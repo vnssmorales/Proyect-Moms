@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../img/logo.svg';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import '../homeMobile.css';
 
 class Nav extends Component{
     render(){
@@ -8,7 +9,7 @@ class Nav extends Component{
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
     <div className="logomoms col col-lg-2 col-md-2">
-        <Link to="/home"><img src={logo} alt="logo"/></Link>
+        <Link to="/home"><img src={logo} id="logo-nav" alt="logo"/></Link>
     </div>
 
     <div className="info col col-lg-7 col-md-6">
@@ -22,15 +23,6 @@ class Nav extends Component{
             </li>
             <li className="nav-item">
                 <a href="/#" className="nav-link">Servicios</a>
-            </li>
-            <li className="nav-item">
-                <a href="/#" className="nav-link" >Advisors</a>
-            </li>
-            <li className="nav-item">
-                <a href="/#" className="nav-link">PM Academy</a>
-            </li>
-            <li className="nav-item">
-                <a  href="/#" className="nav-link">Blog</a>
             </li>
             <li className="nav-item">
                 <a href="/#" className="nav-link">Contáctanos</a>
