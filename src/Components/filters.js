@@ -1,63 +1,27 @@
-import React, { Component } from "react";
-import "../css/publish.css";
-import Filters from "./filters";
+import React, { Component } from 'react';
 
-class Publish extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-        showMoreFilters: false,
-      };
-    this.onButtonClick = this.onButtonClick.bind(this);
-}
 
-  onButtonClick(name) {
-    if(name == "filter"){
-        this.setState({
-            showMoreFilters: true
-            
-        })
-    }
+class Filters extends Component {
     
-  }
-
-
-showComponent(){
-    if(this.state.showMoreFilters){
-       return (<Filters />)
-    }else {
-        return null
-    }
-}
-  sendMail() {
-    let to = "jferrada@vchile.cl";
-    let subject = "probando el envio";
-    let message =
-      "hola josefin estoy enviando un correo de prueba, integre un back y el front";
-    let url = "http://advisergroup.cl/email_sender.php";
-    url += "?to=" + to + "&subject=" + subject + "&message=" + message;
-    fetch(url);
-  }
-  
-  render() {
-    return (
+    render() {
+  return (
       <React.Fragment>
-        <form>
+         
           <h1>Publicar empleo</h1>
           <h3>Información del cargo</h3>
           <div class="form-group">
-          <label htmlFor="inputAddress">Título empleo</label>
+          <label for="inputAddress">Título empleo</label>
           <input
             type="text"
             class="form-control"
             id="inputAddress"
             placeholder="Ejemplo: Front-End developer avanzada"/>
-            <label htmlFor="inputState">Categoría de empleo</label>
+            <label for="inputState">Categoría de empleo</label>
           <select id="inputState" class="form-control">
             <option selected>Escoger</option>
-            <option>Administración</option>
+            <option>...</option>
           </select>
-            <label htmlFor="exampleFormControlTextarea1">
+            <label for="exampleFormControlTextarea1">
               Descripción del cargo
             </label>
             <textarea
@@ -73,9 +37,9 @@ showComponent(){
 
           <div class="form-row">
             <div class="form-group col-md-6">
-            <label htmlFor="inputState">Jornada Laboral</label>
+            <label for="inputState">Jornada Laboral</label>
               <select id="inputState" class="form-control">
-                <option defaultValue>Escoger</option>
+                <option selected>Escoger</option>
                 <option>Proyecto</option>
                 <option>Part-time</option>
                 <option>Freelance</option>
@@ -83,7 +47,7 @@ showComponent(){
               </select>
             </div>
             <div class="form-group col-md-6">
-            <label htmlFor="inputState">Educación</label>
+            <label for="inputState">Educación</label>
               <select id="inputState" class="form-control">
                 <option selected>Escoger</option>
                 <option>...</option>
@@ -93,7 +57,7 @@ showComponent(){
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-            <label htmlFor="inputState">Rango renta</label>
+            <label for="inputState">Rango renta</label>
               <input
               type="text"
               class="form-control"
@@ -112,23 +76,11 @@ showComponent(){
             </div>
             
           </div>
-
-       
-          <div class="form-group">
-          <button type="button" class="btn btn-light" onClick={() => this.onButtonClick("filter")}>
-            Añadir más filtros ▾
-          </button>
-
-          </div>
-          {this.showComponent()}
-                
-          <button type="button" class="btn btn-primary" onClick={this.sendMail}>
-            Terminar publicación
-          </button>
-        </form>
-      </React.Fragment>
-    );
-  }
+         
+      
+    </React.Fragment>
+  );
+}
 }
 
-export default Publish;
+export default Filters

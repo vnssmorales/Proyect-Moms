@@ -6,7 +6,8 @@ import config from '../firebase/config';
 import { Link } from 'react-router-dom';
 import Publish from './publish';
 import Publications from './publications';
-import Profile from './profile'
+import Profile from './profile';
+import Default from './default'
 
 
 
@@ -17,6 +18,7 @@ class Dashboard extends Component {
             showComponentPublish: false,
             showComponentPublications: false,
             showComponentProfile: false,
+            showComponentDefault: true
           };
         this._onButtonClick = this._onButtonClick.bind(this);
         this.logout = this.logout.bind(this);
@@ -28,6 +30,7 @@ class Dashboard extends Component {
                 showComponentPublish: true,
                 showComponentPublications: false,
                 showComponentProfile: false,
+                showComponentDefault: false
                 
             })
         }else if(name == "publications"){
@@ -35,13 +38,17 @@ class Dashboard extends Component {
                 showComponentPublications: true,
                 showComponentPublish: false,
                 showComponentProfile: false,
+                showComponentDefault: false
             })
         }else if(name == "profile"){
             this.setState({
                 showComponentProfile: true,
                 showComponentPublish: false,
                 showComponentPublications: false,
+                showComponentDefault: false
             })
+        }else{
+            this.setState({showComponentDefault: true})
         }
         
       }
@@ -59,8 +66,8 @@ class Dashboard extends Component {
             return (<Publications/>)
         }else if(this.state.showComponentProfile){
             return (<Profile/>)
-        }else {
-            return null
+        }else if(this.state.showComponentDefault){
+            return (<Default/>)
         }
     }
     render() {
