@@ -1,7 +1,11 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
 .bg-light {
     background-color: #355e7e !important;
     color: white !important;
     text-align: center !important;
+    width: 100%;
 }
 
 .home-intro{
@@ -23,7 +27,7 @@
     font-size: 14px;
 }
 #ingresar{
-    color: #355e7e;
+    color: #254863;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 16px;
@@ -65,8 +69,43 @@
    width: 150px;
 }
 
-#aprende{
+#learnmore{
     color: white;
     background-color: transparent;
     margin-top: 20px !important;
 }
+
+h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold; 
+}
+
+#container2{
+    background-image: url('./img/workmom.png');
+    background-repeat: no-repeat;
+}
+
+#impact{
+    font-size: 34px !important;
+    color:white;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2%;
+}
+#enfoque{
+    color:#F85E76;
+}
+#secondtext{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-newsletter{
+    background-color: #F85E76;
+}
+@media (max-width: 600px) {
+    #bigfooter{
+      display: none;
+    }
+    .footer-newsletter{
+        display: none
+    }
+  }
