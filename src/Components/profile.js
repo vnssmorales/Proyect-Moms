@@ -10,6 +10,7 @@ class Profile extends Component {
     <h1 className="display-4 d-none d-sm-block">
                 Bootstrap 4 Dashboard
                 </h1>
+                <img href="http://creativecommons.org/licenses/by/3.0/"></img>
                 <p className="lead d-none d-sm-block">Plus off-canvas sidebar, based on Bootstrap v4</p>
 
                 <div className="alert alert-warning fade collapse" role="alert" id="myAlert">
