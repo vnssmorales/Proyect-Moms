@@ -6,12 +6,15 @@ class Profile extends Component {
     render() {
   return (
       <React.Fragment>
+
           <div style={{padding:" 5px", backgroundColor:"#EFEFEF",  margin: "auto",    }}>
-    <h1 className="display-4 d-none d-sm-block">
-                Bootstrap 4 Dashboard
-                </h1>
+       <h1 className="display-4 d-none d-sm-block"></h1>
+              
+                <p className="lead d-none d-sm-block"></p>
+
                 <img href="http://creativecommons.org/licenses/by/3.0/"></img>
-                <p className="lead d-none d-sm-block">Plus off-canvas sidebar, based on Bootstrap v4</p>
+                <p className="lead d-none d-sm-block"></p>
+
 
                 <div className="alert alert-warning fade collapse" role="alert" id="myAlert">
                     <button type="button" className="close" data-dismiss="alert" aria-label="Close">
@@ -67,6 +70,14 @@ class Profile extends Component {
                     </div>
                 </div>
                 </div>
+
+                <footer className="container-fluid" style={{backgroundColor: "#355E7E "}}>
+        <p className="text-right small">©2016-2019 Company</p>
+            </footer>
+            
+
+                
+
     </React.Fragment>
   );
 }

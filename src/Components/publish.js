@@ -124,6 +124,9 @@ showComponent(){
             Terminar publicación
           </button>
         </form>
+        <footer className="container-fluid" style={{backgroundColor: "#355E7E "}}>
+        <p className="text-right small">©2016-2019 Company</p>
+            </footer>
       </React.Fragment>
     );
   }

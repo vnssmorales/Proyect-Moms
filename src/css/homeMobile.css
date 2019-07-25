@@ -21,7 +21,7 @@
     color: white;
     border: none;
 }
-#ingresa{
+#ingresa, #salir{
     background-color: transparent;
     color: white;
     font-size: 14px;
@@ -75,13 +75,32 @@
     margin-top: 20px !important;
 }
 
+
+/* DASHBOARD*/
+
+
+.bg-light ul li a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.bg-light ul li{
+    padding: 10px;
+}
+.bg-light ul li .active{
+    float: right;
+}
+#col-main{
+    padding-top: 80px !important;
+}
+
 h1{
     font-family: 'Playfair Display', serif;
     font-weight: bold; 
 }
 
 #container2{
-    background-image: url('./img/workmom.png');
+    background-image: url('../img/workmom.png');
     background-repeat: no-repeat;
 }
 
@@ -109,3 +128,4 @@ h1{
         display: none
     }
   }
+

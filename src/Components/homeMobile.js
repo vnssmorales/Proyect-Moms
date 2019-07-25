@@ -1,5 +1,5 @@
 import React from 'react';
-import '../homeMobile.css';
+import '../css/homeMobile.css';
 import {Link} from 'react-router-dom';
 import image1 from '../img/home-purpose_1.jpg';
 import image3 from '../img/home-purpose_3.jpg';
@@ -23,7 +23,7 @@ function HomeMobile() {
 
                     <div className="main-container">
 
-                    <div className="">
+                    <div className="home-intro">
                     <div className="home-intro__wrapper">
                     <div className="home-intro__block">
                     <h1 className="home-intro__subtitle">Cientos de mujeres y empresas confían en nosotros</h1>
