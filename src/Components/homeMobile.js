@@ -2,7 +2,6 @@ import React from 'react';
 import '../homeMobile.css';
 import {Link} from 'react-router-dom';
 import image1 from '../img/home-purpose_1.jpg';
-import image2 from '../img/home-purpose_2.jpg';
 import image3 from '../img/home-purpose_3.jpg';
 import image4 from '../img/case-study1.jpg';
 import image5 from '../img/case-study2.jpg';
@@ -30,34 +29,17 @@ function HomeMobile() {
                     <h1 className="home-intro__subtitle">Cientos de mujeres y empresas confían en nosotros</h1>
                     <h1 className="home-intro__title home-intro__title--playfair">Te ayudamos a cubrir puestos de trabajo según tus necesidades.</h1>
                     </div>
-
-                    <div className="row justify-content-around">
-                    <div className="home-intro__column col col-lg-5 col-sm-3">
-                    <div className="home-block home-block--fill">
-                    <h1 className="home-block__text home-block__text--blue">I&#x27;m an individual looking for my next professional opportunity.</h1>
-                    <Link to="register"> <button type="button" className="btn btn-light m-2" id="unete">Únete a nosotros</button></Link>
+                    <Link to="/register"> <button type="button" className="btn btn-light m-2" id="ingresarEmp">Registra tu empresa</button></Link>
                     </div>
-                    </div>
-                    <div className="home-intro__column col col-lg-5 col-sm-3">
-                    <div className="home-block">
-                    <h1 className="home-block__text">I&#x27;m looking to hire for a role or project on behalf of a company.</h1>
-                    <Link to="/login"> <button type="button" className="btn btn-light m-2" id="ingresar">Regístrate</button></Link>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-
-                    <div className="home-intro__anchor">
-                    <div className="home-intro__anchor__text">Conoce más</div>
-                    
-                   </div>   
+                    </div>  
 
                    <div className="home-purpose">
                    <div className="home-heading__wrapper">
                    <h1 className="home-heading__subtitle home-heading__subtitle--pink">Nuestro enfoque</h1>
                    <h1 className="home-heading__title">Ten el talento que buscas según tu medida</h1>
-                   <div className="home-heading__text"></div>
+                   <div className="home-heading__text">
+                   
+                   </div>
                    </div>
                    </div>       
 
@@ -77,19 +59,16 @@ function HomeMobile() {
                    <p className="card-text">Te ayudamos a gestionar la cantidad de posibles postulantes según el tipo de trabajo: Part-time, Full-time o Proyectos individuales.</p>
                  </div>
                  </div>
-                   
-                   <div className="home-purpose__actions">
-                   <h6 className="home-purpose__title">¿Lista para unirte a más de 1.000 profesionales?</h6>
-                   <Link to="register"> <button type="button" className="btn btn-light m-2" id="registro">¡Regístrate aquí!</button></Link>
                    </div>
-                   </div>
-
+                  
                    <div className="home-services">
                    <div className="home-heading">
                    <div className="home-heading__wrapper">
-                   <h1 className="home-heading__title home-heading__title--white">Cómo ayudamos a tu empresa<br/></h1>
-                   <div className="home-heading__text home-heading__text--white">Mejoramos tu representación de género y te guiamos con mejores prácticas de mercado.<br/>
-                   </div>
+                   <h1 className="home-heading__title home-heading__title--white">Haz un impacto positivo<br/></h1>
+                   <div className="home-heading__text home-heading__text--white">Podrás pertenecer al grupo de compañías que promueven la igualdad de género y la inclusión laboral de mujeres<br/>
+                   <button type="button" className="btn btn-light m-2" id="aprende">Aprende más aquí</button>
+                  </div>
+                   
                    </div>
                    </div>
 
@@ -132,57 +111,7 @@ function HomeMobile() {
                    </div>
                    </div>
                    </div>
-                   <div className="home-services__actions">
-                   <div className="home-services__wrapper">
-                   <h6 className="home-services__title">¿Listo para trabajar?</h6>
-                   <Link to="/register"> <button type="button" className="btn btn-light m-2" id="ingresarEmp">Registra tu empresa</button></Link>
-                   </div>
-                   </div>
-                   </div>
-                   </div>
-
-
-                   <div className="case-studies">
-                   <div className="home-heading">
-                   <div className="home-heading__wrapper">
-                   <h1 className="home-heading__subtitle home-heading__subtitle--pink">Case Studies</h1>
-                   <h1 className="home-heading__title">The stories behind the project</h1>
-                   </div>
-                   </div>
-
-                   <div className="case-studies row justify-content-around" id="row-case-studies">
-
-                   <div className="card" id="case-study">
-                   <img src={image4} className="card-img-top" alt="..."/>
-                   </div>
-
-                   <div className="card" id="case-study-text"> 
-                   <div className="card-body">
-                   <h1 className="case-study__subtitle">PEPsico</h1>
-                   <h1 className="case-study__title">How Cristina got to work as GM &amp; Operation MG</h1>
-                   <div className="case-study__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut sodales turpis. Donec aliquet convallis velit, a volutpat mi mattis ut. Donec non massa tincidunt risus tempus accumsan vel at augue.</div>
-                  <a href="#" className="link">Read more</a>
-                   </div>
-                   </div>
-
-                   <div className="card" id="case-study1">
-                   <img src={image5} alt="..."/>
-                   </div>
-
-                   <div className="card" id="case-study-text1"> 
-                   <div className="card-body">
-                   <h1 className="case-study__subtitle">P&amp;G</h1>
-                   <h1 className="case-study__title">How Teresa started as <strong>Communications &amp; PR Manager </strong></h1>
-                   <div className="case-study__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut sodales turpis. Donec aliquet convallis velit, a volutpat mi mattis ut. Donec non massa tincidunt risus tempus accumsan vel at augue.</div>
-                   <a href="#" className="link">Read more</a>
-                   </div>
-                   </div>
-
-                   </div>
-                   
-                   <div className="home-services__actions">
-                   <div className="home-services__wrapper"><a href="#" className="case-studies__button w-button">See more Case Studies</a>
-                   </div>
+                  
                    </div>
                    </div>
 
@@ -274,15 +203,7 @@ function HomeMobile() {
                    <li className="footer-menu__item"><a href="#" className="footer-menu__link">FAQ</a></li>
                    </ul>
                    </div>
-                   <div className="footer-menu__block col col-3">
-                   <h6 className="footer__title">Profesionales</h6>
-                   <ul className="footer-menu__list">
-                   <li className="footer-menu__item"><a href="#" className="footer-menu__link">Cómo funciona</a></li>
-                   <li className="footer-menu__item"><a href="#" className="footer-menu__link">Historias de Éxito</a></li>
-                   <li className="footer-menu__item"><a href="#" className="footer-menu__link">Regístrate</a></li>
-                   <li className="footer-menu__item"><a href="#" className="footer-menu__link">FAQ</a></li>
-                   </ul>
-                   </div>
+                   
                    <div className="footer-menu__block col col-3">
                    <h6 className="footer__title">Sobre el Proyecto</h6>
                    <ul className="footer-menu__list">

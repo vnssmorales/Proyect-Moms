@@ -6,6 +6,7 @@ class Profile extends Component {
     render() {
   return (
       <React.Fragment>
+          <div style={{padding:" 5px", backgroundColor:"#EFEFEF",  margin: "auto",    }}>
     <h1 className="display-4 d-none d-sm-block">
                 Bootstrap 4 Dashboard
                 </h1>
@@ -64,7 +65,7 @@ class Profile extends Component {
                         </div>
                     </div>
                 </div>
-            
+                </div>
     </React.Fragment>
   );
 }
