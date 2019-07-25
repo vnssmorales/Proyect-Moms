@@ -32,8 +32,7 @@ class Nav extends Component{
         </div>
         
         <div className="buttons col col-lg-3 col-md-3">
-         <Link to="/login"> <button type="button" className="btn btn-light m-2" id="ingresa">INGRESA</button></Link> 
-         <Link to="/register"> <button type="button" className="btn btn-light m-2" id="unete">ÚNETE</button></Link>
+         <Link to="/login"> <button type="button" className="btn btn-light m-2" id="ingresa">INGRESA</button></Link>
         </div>
 </nav>
 ) }
