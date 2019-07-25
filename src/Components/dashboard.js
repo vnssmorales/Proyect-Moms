@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import Publish from './publish';
 import Publications from './publications';
 import Profile from './profile';
-import Default from './default'
+import Default from './default';
+import { db } from './../firebase/config'
 
 
 
@@ -23,6 +24,8 @@ class Dashboard extends Component {
         this._onButtonClick = this._onButtonClick.bind(this);
         this.logout = this.logout.bind(this);
     }
+
+    
     
       _onButtonClick(name) {
         if(name == "publish"){
@@ -47,6 +50,13 @@ class Dashboard extends Component {
                 showComponentPublications: false,
                 showComponentDefault: false
             })
+        }else if(name == "atrás"){
+            this.setState(prevState => ({
+            showComponentPublish: !prevState.showComponentPublish,
+            showComponentPublications: !prevState.showComponentPublications,
+            showComponentProfile: !prevState.showComponentProfile,
+            showComponentDefault: !prevState.showComponentDefault
+            }));
         }else{
             this.setState({showComponentDefault: true})
         }
@@ -67,7 +77,9 @@ class Dashboard extends Component {
         }else if(this.state.showComponentProfile){
             return (<Profile/>)
         }else if(this.state.showComponentDefault){
-            return (<h1>hi</h1>)
+            return null
+        }else{
+            return this.state
         }
     }
     render() {
@@ -111,6 +123,7 @@ class Dashboard extends Component {
                     <li className="nav-item"><a href="javascript:void(0)" name="publish" onClick={() => this._onButtonClick("publish")}>Publicar</a></li>
                     <li className="nav-item"><a href="javascript:void(0)" onClick={() => this._onButtonClick("profile")}>Perfil</a></li>
                     <Link to="/"><button onClick={this.logout}>Cerrar sesión</button></Link>
+                    <button onClick={()=>this._onButtonClick("atras")}>Atrás</button>
                    
                 </ul>
             </div>

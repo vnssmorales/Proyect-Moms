@@ -1,5 +1,7 @@
 import * as firebase from 'firebase';
 
+require("firebase/firestore");
+
 const firebaseConfig = {
     apiKey: "AIzaSyCiUIBspjq2oNQ-T0514O_EmwEm0-BRhbw",
     authDomain: "proyect-moms.firebaseapp.com",
@@ -10,6 +12,11 @@ const firebaseConfig = {
     appId: "1:302426459750:web:a1aef0ee6c2b9e16"
   };
 
-const config = firebase.initializeApp(firebaseConfig);
+export const config = firebase.initializeApp(firebaseConfig);
+
+
+export var db = firebase.firestore();
 
 export default config
+
+

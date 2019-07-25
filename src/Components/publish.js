@@ -18,10 +18,7 @@ class Publish extends Component {
             
         })
     }
-    
   }
-
-
 showComponent(){
     if(this.state.showMoreFilters){
        return (<Filters />)
@@ -43,7 +40,7 @@ showComponent(){
     return (
       <React.Fragment>
         <form id="publish">
-          <h1>Publicar empleo</h1>
+          <h1>Publica un empleo</h1>
           <h3>Información del cargo</h3>
           <div class="form-group">
           <label htmlFor="inputAddress">Título empleo</label>
@@ -115,13 +112,14 @@ showComponent(){
 
        
           <div class="form-group">
+          <label htmlFor="inputState">¿Tu empresa tiene más necesidades?</label>
           <button type="button" class="btn btn-light" onClick={() => this.onButtonClick("filter")}>
             Añadir más filtros ▾
           </button>
 
           </div>
           {this.showComponent()}
-                
+               
           <button type="button" class="btn btn-primary" onClick={this.sendMail}>
             Terminar publicación
           </button>

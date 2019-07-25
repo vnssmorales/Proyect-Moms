@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Nav from './navbar';
-import config from '../firebase/config.js';
+import { db, config } from '../firebase/config.js';
 import { Link } from 'react-router-dom';
-import '../css/register.css'
+import '../css/register.css';
 
 
 
@@ -13,7 +13,13 @@ class Register extends Component{
     this.signup = this.signup.bind(this);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      nombre: '',
+      apellidos: '',
+      razonSocial: '',
+      sector:'',
+      direccion: '',
+      rut: '',
     };
   }
 
@@ -28,13 +34,30 @@ class Register extends Component{
     .catch((error) => {
         console.log(error);
       })
+    db.collection("Users")
+    .add({
+      email: this.state.email,
+      password: this.state.password,
+      nombre: this.state.nombre,
+      apellidos: this.state.apellidos,
+      razonSocial: this.state.razonSocial,
+      sector: this.state.sector,
+      direccion: this.state.direccion,
+      rut: this.state.rut
+    })
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
   }
 
   render(){
   return (
     <React.Fragment>
       <Nav></Nav>
-      <div  Style="padding:5px; background-color:#ECEBEB">
+      <div  style={{padding:"5px", backgroundColor:"#ECEBEB"}}>
       <div className="card" Style="padding:15px; margin: 80px 20px; background-color:#ECEBEB; border-color:#ECEBEB">
     <form>
         <h4>Datos de Usuario</h4>
@@ -49,35 +72,35 @@ class Register extends Component{
     </div>
     <div className="col-md-6">
     <label for="inputEmail4">Nombre</label>
-      <input type="text" class="form-control" placeholder="Nombre"></input>
+      <input value={this.state.nombre} name="nombre"  onChange={this.handleChange} type="text" class="form-control" placeholder="Nombre"></input>
     </div>
     <div className="col-md-6">
     <label for="inputEmail4">Apellidos</label>
-      <input type="text" class="form-control" placeholder="Apellidos"></input>
+      <input value={this.state.apellidos} onChange={this.handleChange} name="apellidos" type="text" class="form-control" placeholder="Apellidos"></input>
     </div>
   </div>
   <div className="build">
-  <h4 Style="margin-top:20px;">Datos de la Empresa</h4>
+  <h4 style={{marginTop: "20px"}}>Datos de la Empresa</h4>
   <div className="form-row">
     <div className="col-md-6">
     <label for="inputEmail4">Nombre o Razón Social</label>
-      <input type="text" class="form-control" placeholder="Nombre Empresa"></input>
+      <input value={this.state.razonSocial} onChange={this.handleChange} name="razonSocial" type="text" class="form-control" placeholder="Nombre Empresa"></input>
     </div>
     <div className="col-md-6">
     <label for="inputEmail4">Sector</label>
-      <input type="text" class="form-control" placeholder="Sector"></input>
+      <input value={this.state.sector} onChange={this.handleChange} name="sector" type="text" class="form-control" placeholder="Sector"></input>
     </div>
   </div>
   <div className="form-row">
     <div className="form-group col-md-6">
       <label for="inputZip">Dirección</label>
-      <input type="text" class="form-control" id="inputZip"></input>
+      <input  value={this.state.direccion} onChange={this.handleChange} name="direccion" type="text" class="form-control" id="inputZip"></input>
     </div>
   </div>
   <div className="form-row">
     <div className="col-md-6">
     <label for="inputEmail4">RUT EMPRESA</label>
-      <input type="text" class="form-control" placeholder="RUT Empresa"></input>
+      <input  value={this.state.rut} onChange={this.handleChange} name="rut" type="text" class="form-control" placeholder="RUT Empresa"></input>
     </div>
     <div className="col-md-6">
     <label for="inputEmail4">Web</label>

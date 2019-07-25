@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
-import group from './../img/group.png'
+import group from './../img/group.png';
+
 
 
 class Default extends Component {
+ /*  getUser() {
+    db.collection("Users").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            console.log(doc.id, " => ", doc.data());
+        });
+    });
+  }
+  componentDidMount() {
+
+    this.getUser()
+  } */
     
     render() {
   return (

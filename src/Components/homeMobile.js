@@ -23,7 +23,7 @@ function HomeMobile() {
 
                     <div className="main-container">
 
-                    <div className="home-intro">
+                    <div className="">
                     <div className="home-intro__wrapper">
                     <div className="home-intro__block">
                     <h1 className="home-intro__subtitle">Cientos de mujeres y empresas confían en nosotros</h1>
