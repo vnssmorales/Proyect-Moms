@@ -14,7 +14,7 @@ class Publish extends Component {
   render() {
     return (
       <React.Fragment>
-        <form>
+        <form id="publish">
           <h1>Publicar empleo</h1>
           <h3>Información del cargo</h3>
           <div class="form-group">
