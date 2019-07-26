@@ -73,7 +73,7 @@ class Dashboard extends Component{
         }else if(this.state.showComponentProfile){
             return (<Profile/>)
         }else if(this.state.showComponentDefault){
-            return null
+            return <Default/>
         }else{
             return this.state
         }
@@ -85,11 +85,10 @@ class Dashboard extends Component{
   return (
       <React.Fragment>
         <nav className="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
-    <div className="logomoms col col-lg-2 col-md-2">
-        <Link to="/home"><img src={logo} id="logo-nav" alt="logo"/></Link>
-    </div>
+        <a className="navbar-brand"><Link to="/home"><img src={logo} id="logo-nav" alt="logo"/></Link></a>
+    
 
-    <div className="info col col-lg-7 col-md-6">
+    <div className="info col col-lg-7">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -105,7 +104,7 @@ class Dashboard extends Component{
                 <a href="javascript:void(0)" onClick={() => this._onButtonClick("profile")}>Perfil</a>
             </li>
             <li>
-            <Link to="/"> <button type="button" className="btn btn-light m-2 active mr-auto" id="salir">Cerrar Sesión</button></Link>
+            <Link to="/"> <button type="button" onClick={() => this.logout()} className="btn btn-light m-2 active mr-auto" id="salir">Cerrar Sesión</button></Link>
             </li>
         </ul>
         </div>
